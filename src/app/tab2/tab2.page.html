@@ -1,0 +1,65 @@
+
+
+ <ion-content class="ion-padding">
+
+         <div class="full_btn">
+            <form>
+                <ion-row>
+                    <ion-col size="6">
+                        <div class="form-group">
+                            <ion-button [routerLink]="['/tabs/payment']"  color="danger" shape="round">Payment</ion-button>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6">
+                        <div>
+                            <ion-button [routerLink]="['/tabs/receive']" color="light" shape="round">Receive</ion-button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </form>
+        </div>
+
+
+
+          <div class="payment_btn">
+              <ion-row>
+
+                  <ion-col size="6">
+                      <div>
+                          <ion-button class="payment_mode_btn"[routerLink]="['/tabs/pcash']" color="success" shape="round" fill="outline" >
+                              Cash
+                          </ion-button>
+                      </div>
+                  </ion-col>
+
+                  <ion-col size="6">
+                      <div>
+                          <ion-button class="payment_mode_btn" [routerLink]="['/tabs/pbank']"  color="success" shape="round" fill="outline">
+                              Bank
+                          </ion-button>
+                      </div>
+                  </ion-col>
+              </ion-row>
+
+              <ion-row>
+                  <ion-col size="6">
+                      <div>
+                          <ion-button  class="payment_mode_btn" [routerLink]="['/tabs/pcheque']" color="success" shape="round"
+                                      fill="outline">Cheque
+                          </ion-button>
+                      </div>
+                  </ion-col>
+
+                  <ion-col size="6">
+                      <div>
+                          <ion-button  class="payment_mode_btn" [routerLink]="['/tabs/ppaytm']"  color="success" shape="round" fill="outline">PayTm
+                          </ion-button>
+                      </div>
+                  </ion-col>
+              </ion-row>
+          </div>
+
+
+
+      </ion-content>

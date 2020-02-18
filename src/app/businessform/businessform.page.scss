@@ -1,0 +1,47 @@
+
+.full_btn{
+margin-top:20%;
+margin-left:10%;
+}
+
+.heading{
+color:#8CB4CD;
+text-align:center;
+}
+
+.select_option{
+color:#9b9b9b;
+}
+.submit-btn{
+color:#8CB4CD;
+text-align:center;
+}
+#pointer {
+      width: 250px;
+      height: 40px;
+      position: relative;
+      background: #EB445A;
+      margin-top:10%;
+    }
+    #pointer:after {
+      content:"";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid white;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+    }
+    #pointer:before {
+      content: "";
+      position: absolute;
+      right: -20px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid #EB445A;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+    }
