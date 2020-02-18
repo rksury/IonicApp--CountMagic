@@ -5,10 +5,53 @@ height:100%;
 background-size:cover;
 }
 
-.heading{
+.heading1{
 font-family:arial;
-color: red;
-margin-top:50%;
+color: white;
+margin-top:30%;
+font-size:40px;
+}
+
+.heading2{
+font-family:arial;
+color: white;
+margin-top:30%;
+font-size:20px;
+}
+.heading3{
+font-family:arial;
+color: white;
+margin-top:40%;
+font-size:30px;
+}
+
+.img_overlay {
+background-color: rgba(0,0,25,0.7) !important;
+  height: 100%;
+  width: 100%;
+}
+
+icon_icon{
+height: 50px;
+  width: 50px;
+  float:left;
+}
 
 
-}   git git remote add
+.part_line{
+    position: relative;
+    display: inline-block;
+    margin-left:10%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    border-bottom: solid 3px #eb445a;
+    border-left: solid 3px #eb445a;
+    color: white;
+    transition: .4s;
+    float:left;
+    width: 200px;
+    height: 40px;
+    }
+
+
+
