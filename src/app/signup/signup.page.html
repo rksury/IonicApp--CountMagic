@@ -19,14 +19,14 @@
 			<form [formGroup]="SignupForm"  novalidate>
 				<ion-row>
 					<ion-col size="12">
-						<div class="input-group form-group">
+						<div>
 							<ion-list>
 
 								<ion-item>
 									<ion-icon slot="start" name="person" color="primary"></ion-icon>
 									<ion-input type="text" formControlName="username" placeholder="Username"
 											   required></ion-input>
-									<div *ngFor="let error of errorMessage.username">
+									<div *ngFor="let error of errorMessage.username" style="color: red;">
 										<ng-container
 												*ngIf="username.hasError(error.type) && (username.dirty || username.touched)">
 											<small class="error-message">{{error.message}}</small>
@@ -38,7 +38,7 @@
 								<ion-item>
 									<ion-icon slot="start"  name="mail" color="primary"></ion-icon>
 									<ion-input type="email" formControlName="email" placeholder="E-mail" required></ion-input>
-									<div *ngFor="let error of errorMessage.email">
+									<div *ngFor="let error of errorMessage.email" style="color: red;">
 										<ng-container
 												*ngIf="email.hasError(error.type) && (email.dirty || email.touched)">
 											<small class="error-message">{{error.message}}</small>
@@ -50,7 +50,7 @@
 								<ion-item>
 									<ion-icon slot="start" name="call" color="primary"></ion-icon>
 									<ion-input type="number" formControlName="mobile" placeholder="+91" required></ion-input>
-									<div *ngFor="let error of errorMessage.mobile">
+									<div *ngFor="let error of errorMessage.mobile" style="color: red;">
 										<ng-container
 												*ngIf="mobile.hasError(error.type) && (mobile.dirty || mobile.touched)">
 											<small class="error-message">{{error.message}}</small>
@@ -63,7 +63,7 @@
 									<ion-icon slot="start" name="key" color="primary"></ion-icon>
 									<ion-input type="password" formControlName="password" placeholder="Password"
 											   required></ion-input>
-									<div *ngFor="let error of errorMessage.password">
+									<div *ngFor="let error of errorMessage.password" style="color: red;">
 										<ng-container
 												*ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
 											<small class="error-message">{{error.message}}</small>
@@ -80,7 +80,7 @@
 
 
 						<div>
-							<ion-button [routerLink]="['/login']"class="login_btn" type="submit" expand="block" shape="round" color="danger">Signup
+							<ion-button [routerLink]="['/processing']"class="login_btn" type="submit" expand="block" shape="round" color="danger">Signup
 							</ion-button>
 						</div>
 

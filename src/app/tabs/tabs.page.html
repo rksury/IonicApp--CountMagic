@@ -13,11 +13,11 @@
       <ion-list>
         <ion-item>
         <ion-icon name="arrow-up" slot="start"></ion-icon>
-          <a href="/tabs/payment"><ion-label color="dark">Payment</ion-label></a>
+           <ion-label [routerLink]="['/tabs/payment']" color="dark">Payment</ion-label>
         </ion-item>
         <ion-item>
          <ion-icon name="arrow-down" slot="start"></ion-icon>
-          <a href="/tabs/receive"><ion-label color="dark">Receive</ion-label></a>
+          <ion-label [routerLink]="['/tabs/receive']" color="dark">Receive</ion-label>
         </ion-item>
         <ion-item>
           <ion-icon name="cog" slot="start"></ion-icon>
@@ -29,7 +29,7 @@
         </ion-item>
           <ion-item>
             <ion-icon name="log-out" slot="start"></ion-icon>
-              <a href="/login"><ion-label color="dark">Log Out</ion-label></a>
+              <ion-label color="dark" [routerLink]="['/login']">Log Out</ion-label>
         </ion-item>
 
       </ion-list>
@@ -59,9 +59,7 @@
 
 
 <ion-tabs>
-<ion-tab-bar slot="top" color="light">
-
-</ion-tab-bar>
+<!--  <ion-tab-bar slot="top" color="secondary"></ion-tab-bar>-->
 
 
   <ion-tab-bar slot="bottom" color="danger">

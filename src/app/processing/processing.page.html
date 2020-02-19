@@ -1,67 +1,64 @@
-<ion-content>
+<ion-app>
 
-    <div id="bg_color">
 
-        <div class="img_overlay">
+        <ion-content >
+<div id="bg_color">
+
             <ion-slides>
-
                 <ion-slide>
-                    <h1 class="heading1">welcome to Count Magic</h1>
-                </ion-slide>
-
-                <ion-slide>
-                    <p class="heading2">some message for "why we will use count magic"</p>
-                </ion-slide>
-
-                <ion-slide>
-                    <div>
-
-                        <ion-row>
-                            <ion-col size="12">
-                                <div>
-                                    <h1 class="heading3">What is the Purpose</h1>
-                                </div>
-                            </ion-col>
-                        </ion-row>
-
-                        <ion-row>
-                            <ion-col size="12">
-                                <div>
-                                    <a href="/tabs/home" class="part_line">
-                                      <i class="fa fa-caret-right"></i> Non Employment
-                                    </a>
-                                </div>
-                            </ion-col>
-                        </ion-row>
-
-                        <ion-row>
-                            <ion-col size="12">
-                                <div >
-                                    <a href="/tabs/home" class="part_line">
-                                      <i class="fas fa-user-tie "></i> Employee
-                                    </a>
-                                </div>
-
-                            </ion-col>
-                        </ion-row>
-
-                        <ion-row>
-                            <ion-col>
-                                <div>
-                                    <a href="/tabs/home" class="part_line">
-                                    <i class="fas fa-briefcase"></i> Businessmen
-                                    </a>
-                                </div>
-                            </ion-col>
-                        </ion-row>
-
+                    <div class="img_overlay">
+                        <h1 class="heading1">welcome to Count Magic</h1>
                     </div>
+                </ion-slide>
 
+
+                <ion-slide>
+                    <div class="img_overlay">
+                        <p class="heading2">some message for "why we will use count magic"</p>
+                    </div>
+                </ion-slide>
+
+
+                <ion-slide>
+                    <div class="img_overlay">
+                        <div>
+                            <ion-row>
+                                <ion-col size="12">
+                                        <h1 class="heading3">What is the Purpose</h1>
+                                </ion-col>
+                            </ion-row>
+
+                            <ion-row>
+                                <ion-col size="12">
+                                    <div [routerLink]="['/tabs/home']" class="part_line">
+                                        <i class="fa fa-caret-right"></i> Non Employment
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+
+                            <ion-row>
+                                <ion-col size="12">
+                                    <div [routerLink]="['/tabs/home']" class="part_line">
+                                        <i class="fas fa-user-tie "></i> Employee
+
+                                    </div>
+                            </ion-col>
+                            </ion-row>
+
+                            <ion-row>
+                                <ion-col>
+                                    <div [routerLink]="['/tabs/home']" class="part_line">
+                                        <i class="fas fa-briefcase"></i> Businessmen
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+
+                        </div>
+                    </div>
                 </ion-slide>
             </ion-slides>
-        </div>
+ </div>
 
-    </div>
+        </ion-content>
 
-
-</ion-content>
+</ion-app>
