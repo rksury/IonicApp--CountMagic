@@ -1,163 +1,160 @@
 <ion-app>
-<ion-content >
+    <ion-content>
 
 
-            <div >
-                <ion-button id="pointer" color="danger">Business Profile</ion-button>
-                <h1 class="heading"> Personal Detail </h1>
-            </div>
+        <div>
+            <ion-button id="pointer" color="danger">Business Profile</ion-button>
+            <h1 class="heading"> Personal Detail </h1>
+        </div>
 
-     <div>
-        <form>
-            <div>
-                <ion-row>
-                    <ion-col size="12">
-                        <ion-list inset>
-
-                            <ion-item>
-                                <ion-input type="text" name="username" placeholder="Username" required></ion-input>
-                            </ion-item>
-
-                            <ion-item>
-                                <ion-input type="text" name="fullname" placeholder="Full Name" required></ion-input>
-                            </ion-item>
-
-                            <ion-item>
-                                <ion-input type="email" name="email" placeholder="E-mail" required></ion-input>
-                            </ion-item>
-
-                            <ion-item class="select_option">
-                                <ion-input type="date" placeholder="D.O.B." name="dob" required></ion-input>
-                            </ion-item>
-
-                            <ion-item>
-                                <ion-input type="number" name="mobile" placeholder="Mobile Number" required></ion-input>
-                            </ion-item>
-
-                            <ion-item>
-                                <ion-input type="password" name="password" placeholder="Password" required></ion-input>
-                            </ion-item>
-
-                            <ion-item>
-                                <ion-input type="text" name="text" placeholder="Address" required></ion-input>
-                            </ion-item>
-
-                        </ion-list>
-                    </ion-col>
-                </ion-row>
-            </div>
-
-            <div>
-                <div class="heading">
-                    <h1> Employee Detail </h1>
-                </div>
-
+        <div>
+            <form>
                 <div>
                     <ion-row>
                         <ion-col size="12">
                             <ion-list inset>
 
                                 <ion-item>
-                                    <ion-input type="text" name="companyname" placeholder="Company Name" required></ion-input>
+                                    <ion-input type="text" name="username" placeholder="Username" required></ion-input>
                                 </ion-item>
 
                                 <ion-item>
-                                    <ion-input type="number" name="zipcode" placeholder="Zip Code" required></ion-input>
+                                    <ion-input type="text" name="fullname" placeholder="Full Name" required></ion-input>
                                 </ion-item>
 
                                 <ion-item>
-                                    <ion-input type="text" name="pan" placeholder="PAN Number" required></ion-input>
+                                    <ion-input type="email" name="email" placeholder="E-mail" required></ion-input>
                                 </ion-item>
+
+                                <ion-item class="select_option">
+                                <ion-datetime type="date" displayFormat="DD/MM/YYYY" name="dob" placeholder="D.O.B." ></ion-datetime>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-input type="number" name="mobile" placeholder="Mobile Number"
+                                               required></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-input type="password" name="password" placeholder="Password"
+                                               required></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-input type="text" name="text" placeholder="Address" required></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label class="select_option">Select Country</ion-label>
+                                    <ion-select value="" okText="Ok" cancelText="Dismiss">
+                                        <ion-select-option value="india">India</ion-select-option>
+                                        <ion-select-option value="australia">Australia</ion-select-option>
+                                        <ion-select-option value="united states">United States</ion-select-option>
+                                        <ion-select-option value="london">london</ion-select-option>
+                                    </ion-select>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label class="select_option">Select State</ion-label>
+                                    <ion-select value="" okText="Ok" cancelText="Dismiss">
+                                        <ion-select-option value="Madhya Pradesh">Madhya Pradesh</ion-select-option>
+                                        <ion-select-option value="Delhi">Delhi</ion-select-option>
+                                        <ion-select-option value="U.P.">U.P.</ion-select-option>
+                                        <ion-select-option value="Gujarat">Gujarat</ion-select-option>
+                                        <ion-select-option value="maharashtra">Maharashtra</ion-select-option>
+                                    </ion-select>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label class="select_option">Select City</ion-label>
+                                    <ion-select value="" okText="Ok" cancelText="Dismiss">
+                                        <ion-select-option value="indore">Indore</ion-select-option>
+                                        <ion-select-option value="bhopal">Bhopal</ion-select-option>
+                                        <ion-select-option value="jabalpur">Jabalpur</ion-select-option>
+                                        <ion-select-option value="gwalior">Gwalior</ion-select-option>
+                                        <ion-select-option value="ujjain">Ujjain</ion-select-option>
+                                    </ion-select>
+                                </ion-item>
+
 
                             </ion-list>
                         </ion-col>
                     </ion-row>
                 </div>
 
-            </div>
+                            <div>
+                                <div class="heading">
+                                    <h1> Employee Detail </h1>
+                                </div>
 
-               <div>
-                <div class="heading">
-                    <h1> Business Detail </h1>
+                                <div>
+                                    <ion-row>
+                                        <ion-col size="12">
+                                            <ion-list inset>
+
+                                                <ion-item>
+                                                    <ion-input type="text" name="companyname" placeholder="Company Name" required></ion-input>
+                                                </ion-item>
+
+                                                <ion-item>
+                                                    <ion-input type="number" name="zipcode" placeholder="Zip Code" required></ion-input>
+                                                </ion-item>
+
+                                            </ion-list>
+                                        </ion-col>
+                                    </ion-row>
+                                </div>
+
+                            </div>
+
+                <div>
+                    <div class="heading">
+                        <h1> Business Detail </h1>
+                    </div>
+
+                    <div>
+                        <ion-row>
+                            <ion-col size="12">
+                                <ion-list inset>
+
+                                    <ion-item>
+                                        <ion-input type="text" name="firmname" placeholder="Firm Name"
+                                                   required></ion-input>
+                                    </ion-item>
+
+                                    <ion-item>
+                                        <ion-input type="text" name="gst" placeholder="GST Number"
+                                                   required></ion-input>
+                                    </ion-item>
+                                    <ion-item>
+                                        <ion-input type="text" name="pan" placeholder="PAN Number"
+                                                   required></ion-input>
+                                    </ion-item>
+
+                                    <ion-item>
+                                        <ion-input type="number" name="zipcode" placeholder="Zip Code"
+                                                   required></ion-input>
+                                    </ion-item>
+
+
+                                </ion-list>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+
                 </div>
 
                 <div>
                     <ion-row>
-                        <ion-col size="12">
-                            <ion-list inset>
-
-                                <ion-item>
-                                    <ion-input type="text" name="firmname" placeholder="Firm Name"
-                                               required></ion-input>
-                                </ion-item>
-
-                                <ion-item>
-                                    <ion-input type="text" name="address" placeholder="GST Number"
-                                               required></ion-input>
-                                </ion-item>
-
-                                <ion-item>
-                                    <ion-input type="number" name="zipcode" placeholder="Zip Code"
-                                               required></ion-input>
-                                </ion-item>
-
-                                <ion-item>
-                                    <ion-input type="text" name="pan" placeholder="PAN Number"
-                                               required></ion-input>
-                                </ion-item>
-
-                                <ion-item>
-                                <ion-label class="select_option">Select Country</ion-label>
-                                <ion-select value="" okText="Ok" cancelText="Dismiss">
-                                    <ion-select-option value="india">India</ion-select-option>
-                                    <ion-select-option value="australia">Australia</ion-select-option>
-                                    <ion-select-option value="united states">United States</ion-select-option>
-                                    <ion-select-option value="london">london</ion-select-option>
-                                </ion-select>
-                            </ion-item>
-
-                            <ion-item >
-                                <ion-label class="select_option">Select State</ion-label>
-                                <ion-select value="" okText="Ok" cancelText="Dismiss">
-                                    <ion-select-option value="Madhya Pradesh">Madhya Pradesh</ion-select-option>
-                                    <ion-select-option value="Delhi">Delhi</ion-select-option>
-                                    <ion-select-option value="U.P.">U.P.</ion-select-option>
-                                    <ion-select-option value="Gujarat">Gujarat</ion-select-option>
-                                    <ion-select-option value="maharashtra">Maharashtra</ion-select-option>
-                                </ion-select>
-                            </ion-item>
-
-                            <ion-item>
-                                <ion-label class="select_option">Select City</ion-label>
-                                <ion-select value="" okText="Ok" cancelText="Dismiss">
-                                    <ion-select-option value="indore">Indore</ion-select-option>
-                                    <ion-select-option value="bhopal">Bhopal</ion-select-option>
-                                    <ion-select-option value="jabalpur">Jabalpur</ion-select-option>
-                                    <ion-select-option value="gwalior">Gwalior</ion-select-option>
-                                    <ion-select-option value="ujjain">Ujjain</ion-select-option>
-                                </ion-select>
-                            </ion-item>
-
-                            </ion-list>
+                        <ion-col size="12" class="submit-btn">
+                            <ion-button color="primary" fill="outline" shape="round" type="submit">Submit</ion-button>
                         </ion-col>
                     </ion-row>
                 </div>
+            </form>
+        </div>
 
-            </div>
-
-            <div>
-                <ion-row>
-                    <ion-col size="12" class="submit-btn">
-                        <ion-button color="primary" fill="outline" shape="round" type="submit">Submit</ion-button>
-                    </ion-col>
-                </ion-row>
-            </div>
-        </form>
-    </div>
-
-</ion-content>
-
-
+    </ion-content>
 
 
 </ion-app>

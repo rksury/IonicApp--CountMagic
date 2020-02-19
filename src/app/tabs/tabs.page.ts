@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabs',
@@ -6,7 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
+  constructor(private router: Router) {}
 
-  constructor() {}
+  paymentlink(){
+    this.router.navigate(['/tabs/payment'])
+
+  };
+
+  receivelink(){
+    this.router.navigate(['/tabs/receive'])
+  };
+  logout(){
+    this.router.navigate(['/login'])
+  };
+
+
 
 }
