@@ -13,7 +13,7 @@
         <ion-list>
 
             <ion-menu-toggle auto-hide="true">
-                <ion-item class="menu_link" class="menu_link" (click)="paymentlink()" routerDirection="forward">
+                <ion-item class="menu_link" (click)="paymentlink()" routerDirection="forward">
                     <ion-icon name="arrow-up" style="box-shadow: none;" slot="start"></ion-icon>
                     <ion-label>Payment</ion-label>
                 </ion-item>
@@ -34,7 +34,7 @@
                 </ion-item>
 
 
-                <ion-item (click)="logout()" routerDirection="forward">
+                <ion-item  class="menu_link"  (click)="logout()" routerDirection="forward">
                     <ion-icon name="log-out" slot="start"></ion-icon>
                     <ion-label>Log Out</ion-label>
                 </ion-item>

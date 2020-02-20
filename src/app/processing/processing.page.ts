@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-processing',
-  templateUrl: './processing.page.html',
-  styleUrls: ['./processing.page.scss'],
+    selector: 'app-processing',
+    templateUrl: './processing.page.html',
+    styleUrls: ['./processing.page.scss'],
 })
-export class ProcessingPage implements OnInit {
+export class ProcessingPage {
 
-  constructor() { }
+    constructor(private router: Router) {
+    }
 
-  ngOnInit() {
-  }
+    nonemplink() {
+        this.router.navigate(['/tabs/home'])
+    };
+
+    emplink() {
+        this.router.navigate(['/tabs/home'])
+    };
+
+    businessmenlink() {
+        this.router.navigate(['/tabs/home'])
+    };
 
 }

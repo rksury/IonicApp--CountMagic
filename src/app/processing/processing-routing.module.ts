@@ -1,17 +1,18 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { ProcessingPage } from './processing.page';
+import {ProcessingPage} from './processing.page';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: ProcessingPage
-  }
+    {
+        path: '',
+        component: ProcessingPage
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule],
 })
-export class ProcessingPageRoutingModule {}
+export class ProcessingPageRoutingModule {
+}
