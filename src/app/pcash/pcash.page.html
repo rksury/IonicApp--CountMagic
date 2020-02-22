@@ -24,6 +24,13 @@
                                 <ion-datetime type="date" displayFormat="DD/MM/YYYY" name="date"
                                               placeholder="DD/MM/YYYY"></ion-datetime>
                             </ion-item>
+                            <ion-item>
+                                <ion-input type="number" placeholder="*Contact Number" name="contact" required></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-input type="number" placeholder="Contact Number" name="contact" (click)="opencontact()"  required></ion-input>
+                                <ion-icon slot="start" name="book" color="primary"></ion-icon>
+                            </ion-item>
                             <ion-item class="select_option">
                                 <ion-textarea placeholder="Payment Detail Entry" name="textarea"
                                               required></ion-textarea>

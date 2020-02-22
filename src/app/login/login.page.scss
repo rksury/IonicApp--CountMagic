@@ -1,21 +1,54 @@
-.heading{
-font-size:40px;
-color:#E31459;
-text-align:center;
+.main_grid {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 300px;
 }
 
-.login_btn{
-margin-top:10%;
-margin-left:5%;
-width:300px;
-color:#9b9b9b;
-text-align:center;
 
+.heading {
+  font-size: 40px;
+  color: #E31459;
+  text-align: center;
+}
+
+.fgt_pwd {
+  text-align: center;
+  color: #a0a0a0;
+  font-size: 15px;
+}
+
+.fgt_pwd:hover {
+  text-align: center;
+  color: #36abe0;
+  font-size: 15px;
 
 }
 
-.forget_pws{
-text-align:center;
-margin-top:5%;
+.hr_line {
+ margin-top: 10%;
+  width: 70%;
+  border: 1px solid white !important;
+ background-color: #a0a0a0 ;
+ height: 1px;
+}
+
+.message_acc{
+ text-align: center;
+   color: #a0a0a0;
+  font-size: 15px;
+}
+
+.danger_btn {
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.blue_btn {
+
+  justify-content: center;
+  align-items: center;
+  width: 300px;
 }
 

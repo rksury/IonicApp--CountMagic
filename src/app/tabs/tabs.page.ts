@@ -11,7 +11,6 @@ export class TabsPage {
 
   paymentlink(){
     this.router.navigate(['/tabs/payment'])
-
   };
 
   receivelink(){
