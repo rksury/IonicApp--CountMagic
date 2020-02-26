@@ -8,43 +8,43 @@
         </div>
 
         <div>
-            <form>
-                <div>
+            <form [formGroup]="BusinessFormgroup" (ngSubmit)="OnSubmit(dataTosend);">
+                <div >
                     <ion-row>
-                        <ion-col size="12">
+                        <ion-col>
                             <ion-list inset>
 
-                                <ion-item>
-                                    <ion-input type="text" name="username" placeholder="Username" required></ion-input>
+                                <ion-item class="form-group">
+                                        <ion-input class="form-control" type="text"  ngModel="formdata.username" formControlName="username" placeholder="Username" required></ion-input>
                                 </ion-item>
 
-                                <ion-item>
-                                    <ion-input type="text" name="fullname" placeholder="Full Name" required></ion-input>
+                                <ion-item class="form-group">
+                                    <ion-input class="form-control" type="text" ngModel="formdata.fullname" formControlName="fullname" placeholder="Full Name" required></ion-input>
                                 </ion-item>
 
-                                <ion-item>
-                                    <ion-input type="email" name="email" placeholder="E-mail" required></ion-input>
+                                <ion-item class="form-group">
+                                    <ion-input class="form-control" type="email" ngModel="formdata.email" formControlName="email" placeholder="E-mail" required></ion-input>
+                                </ion-item >
+
+                                <ion-item class="select_option form-group">
+                                <ion-datetime class="form-control" type="date" ngModel="formdata.dob" displayFormat="DD/MM/YYYY" formControlName="dob" placeholder="D.O.B." ></ion-datetime>
                                 </ion-item>
 
-                                <ion-item class="select_option">
-                                <ion-datetime type="date" displayFormat="DD/MM/YYYY" name="dob" placeholder="D.O.B." ></ion-datetime>
-                                </ion-item>
-
-                                <ion-item>
-                                    <ion-input type="number" name="mobile" placeholder="Mobile Number"
+                                <ion-item class="form-group">
+                                    <ion-input class="form-control" type="number" ngModel="formdata.number" formControlName="number" placeholder="Mobile Number"
                                                required></ion-input>
                                 </ion-item>
 
-                                <ion-item>
-                                    <ion-input type="password" name="password" placeholder="Password"
+                                <ion-item class="form-group">
+                                    <ion-input  class="form-control" type="password" ngModel="formdata.password" formControlName="password" placeholder="Password"
                                                required></ion-input>
+                                </ion-item >
+
+                                <ion-item class="form-group">
+                                    <ion-input class="form-control" type="text" ngModel="formdata.address" formControlName="address" placeholder="Address" required></ion-input>
                                 </ion-item>
 
-                                <ion-item>
-                                    <ion-input type="text" name="text" placeholder="Address" required></ion-input>
-                                </ion-item>
-
-                                <ion-item>
+                                <ion-item class="form-group">
                                     <ion-label class="select_option">Select Country</ion-label>
                                     <ion-select value="" okText="Ok" cancelText="Dismiss">
                                         <ion-select-option value="india">India</ion-select-option>
@@ -52,9 +52,9 @@
                                         <ion-select-option value="united states">United States</ion-select-option>
                                         <ion-select-option value="london">london</ion-select-option>
                                     </ion-select>
-                                </ion-item>
+                                </ion-item >
 
-                                <ion-item>
+                                <ion-item class="form-group">
                                     <ion-label class="select_option">Select State</ion-label>
                                     <ion-select value="" okText="Ok" cancelText="Dismiss">
                                         <ion-select-option value="Madhya Pradesh">Madhya Pradesh</ion-select-option>
@@ -65,7 +65,7 @@
                                     </ion-select>
                                 </ion-item>
 
-                                <ion-item>
+                                <ion-item class="form-group">
                                     <ion-label class="select_option">Select City</ion-label>
                                     <ion-select value="" okText="Ok" cancelText="Dismiss">
                                         <ion-select-option value="indore">Indore</ion-select-option>
@@ -89,15 +89,15 @@
 
                                 <div>
                                     <ion-row>
-                                        <ion-col size="12">
+                                        <ion-col>
                                             <ion-list inset>
 
-                                                <ion-item>
-                                                    <ion-input type="text" name="companyname" placeholder="Company Name" required></ion-input>
+                                                <ion-item class="form-group">
+                                                    <ion-input class="form-control" type="text" ngModel="formdata.companyname" formControlName="companyname" placeholder="Company Name" required></ion-input>
                                                 </ion-item>
 
-                                                <ion-item>
-                                                    <ion-input type="number" name="zipcode" placeholder="Zip Code" required></ion-input>
+                                                <ion-item class="form-group">
+                                                    <ion-input class="form-control" type="number" ngModel="formdata.zipcode" formControlName="zipcode" placeholder="Zip Code" required></ion-input>
                                                 </ion-item>
 
                                             </ion-list>
@@ -114,28 +114,22 @@
 
                     <div>
                         <ion-row>
-                            <ion-col size="12">
+                            <ion-col>
                                 <ion-list inset>
 
-                                    <ion-item>
-                                        <ion-input type="text" name="firmname" placeholder="Firm Name"
+                                    <ion-item class="form-group">
+                                        <ion-input class="form-control" type="text" ngModel="formdata.firmname" formControlName="firmname" placeholder="Firm Name"
                                                    required></ion-input>
                                     </ion-item>
 
-                                    <ion-item>
-                                        <ion-input type="text" name="gst" placeholder="GST Number"
+                                    <ion-item class="form-group">
+                                        <ion-input class="form-control" type="text" ngModel="formdata.gst" formControlName="gst" placeholder="GST Number"
                                                    required></ion-input>
                                     </ion-item>
-                                    <ion-item>
-                                        <ion-input type="text" name="pan" placeholder="PAN Number"
+                                    <ion-item class="form-group">
+                                        <ion-input class="form-control" type="text" ngModel="formdata.pan" formControlName="pan" placeholder="PAN Number"
                                                    required></ion-input>
                                     </ion-item>
-
-                                    <ion-item>
-                                        <ion-input type="number" name="zipcode" placeholder="Zip Code"
-                                                   required></ion-input>
-                                    </ion-item>
-
 
                                 </ion-list>
                             </ion-col>

@@ -1,6 +1,6 @@
-import{NgModule}from'@angular/core';
-import {RouterModule, Routes}from '@angular/router';
-import {TabsPage}from './tabs.page';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {TabsPage} from './tabs.page';
 
 const routes: Routes = [
 {
@@ -73,6 +73,11 @@ loadChildren: () =>
           }
         ]
       },
+
+    {
+    path: 'hometable',
+    loadChildren: () => import('../hometable/hometable.module').then( m => m.HometablePageModule)
+  },
 
 
       {

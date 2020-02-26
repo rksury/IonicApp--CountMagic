@@ -5,22 +5,22 @@
             <img class="mx-auto d-block mt-5 mb-2" src="/assets/icon/site-logo.png">
         </div>
 
-        <div>
-            <ion-row>
-                <ion-col size="12">
-                    <div>
-                        <h1 class="heading">Signup</h1>
-                    </div>
-                </ion-col>
-            </ion-row>
-        </div>
+        <!--        <div>-->
+        <!--            <ion-row>-->
+        <!--                <ion-col size="12">-->
+        <!--                    <div>-->
+        <!--                        <h1 class="heading">Signup</h1>-->
+        <!--                    </div>-->
+        <!--                </ion-col>-->
+        <!--            </ion-row>-->
+        <!--        </div>-->
 
         <div>
             <form [formGroup]="SignupForm" novalidate>
 
                 <ion-grid class="main_grid">
                     <ion-row>
-                        <ion-col >
+                        <ion-col>
                             <div>
                                 <ion-list>
 
@@ -83,10 +83,15 @@
                 </ion-grid>
 
 
-               <ion-grid class="danger_btn">
-                    <ion-button [routerLink]="['/processing']" class="login_btn" type="submit" expand="block"
-                                shape="round" color="danger">Signup
-                    </ion-button>
+                <ion-grid class="danger_btn">
+                    <ion-row>
+                        <ion-col>
+
+                            <ion-button [routerLink]="['/processing']" class="login_btn" type="submit" expand="block"
+                                        shape="round" color="danger">Signup
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
                 </ion-grid>
 
 

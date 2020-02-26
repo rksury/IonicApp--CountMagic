@@ -1,36 +1,32 @@
 <ion-content class="ion-padding">
 
 
-    <ion-grid class="full_btn">
+   <ion-grid class="full_btn">
         <form>
             <ion-row>
-
                 <ion-col></ion-col>
-
                 <ion-col>
-                    <div class="form-group">
-                        <ion-button [routerLink]="['/tabs/payment']" color="light" shape="round">Payment
-                        </ion-button>
+                    <div >
+                        <img width="60px;" src="/assets/icon/debit-card.svg" [routerLink]="['/tabs/payment']">
+                        <p class="payment_text">Payment</p>
                     </div>
                 </ion-col>
-
+                <ion-col></ion-col>
                 <ion-col>
                     <div>
-                        <ion-button [routerLink]="['/tabs/receive']" color="danger" shape="round">Receive</ion-button>
+                        <img width="60px;" src="/assets/icon/money.svg" [routerLink]="['/tabs/receive']">
+                        <p class="receive_text">Receive</p>
                     </div>
                 </ion-col>
-
                 <ion-col></ion-col>
-
             </ion-row>
         </form>
     </ion-grid>
 
 
-
     <ion-grid class="receive_btn">
         <ion-row>
- <ion-col></ion-col>
+            <ion-col></ion-col>
             <ion-col>
                 <div>
                     <ion-button class="receive_mode_btn" [routerLink]="['/tabs/rcash']" color="success" shape="round"
@@ -46,11 +42,11 @@
                     </ion-button>
                 </div>
             </ion-col>
-             <ion-col></ion-col>
+            <ion-col></ion-col>
         </ion-row>
 
         <ion-row>
-             <ion-col></ion-col>
+            <ion-col></ion-col>
             <ion-col>
                 <div>
                     <ion-button class="receive_mode_btn" [routerLink]="['/tabs/rcheque']" color="success" shape="round"
@@ -59,14 +55,14 @@
                 </div>
             </ion-col>
 
-            <ion-col >
+            <ion-col>
                 <div>
                     <ion-button class="receive_mode_btn" [routerLink]="['/tabs/rpaytm']" color="success" shape="round"
                                 fill="outline">PayTm
                     </ion-button>
                 </div>
             </ion-col>
-             <ion-col></ion-col>
+            <ion-col></ion-col>
         </ion-row>
     </ion-grid>
 

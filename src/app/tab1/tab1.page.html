@@ -1,33 +1,56 @@
-<ion-content class="ion-padding">
+<ion-app>
+    <ion-content>
 
-    <ion-grid class="full_btn">
-        <form>
+        <ion-grid class="full_btn">
             <ion-row>
                 <ion-col></ion-col>
                 <ion-col>
-                    <div class="form-group">
-                        <ion-button [routerLink]="['/tabs/payment']" type="submit" color="danger" shape="round">Payment
-                        </ion-button>
-                    </div>
-                </ion-col>
-
-                <ion-col>
                     <div>
-                        <ion-button [routerLink]="['/tabs/receive']" color="danger" shape="round">Receive</ion-button>
+                        <img width="50px;" src="/assets/icon/debit-card.svg" [routerLink]="['/tabs/payment']">
+                        <p class="icon_text">Payment</p>
                     </div>
                 </ion-col>
                 <ion-col></ion-col>
-
+                <ion-col>
+                    <div>
+                        <img width="50px;" src="/assets/icon/money.svg" [routerLink]="['/tabs/receive']">
+                        <p class="icon_text">Receive</p>
+                    </div>
+                </ion-col>
+                <ion-col></ion-col>
             </ion-row>
-        </form>
-    </ion-grid>
+        </ion-grid>
+
+        <ion-grid class="filter_bar">
+            <ion-row>
+                <ion-col>
+                    <ion-button class="filter_btn" expand="block" color="warning">Pending</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button class="filter_btn" expand="block" color="danger">Payed</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button class="filter_btn" expand="block" color="success">Received</ion-button>
+                </ion-col>
+            </ion-row>
+
+        </ion-grid>
 
 
-    <div class="text_dash">
-        <ion-text>
-            <h1>! Choose the option <br> as per your need</h1>
-        </ion-text>
-    </div>
+<!--        <ion-grid>-->
+<!--            <app-hometable></app-hometable>-->
+<!--        </ion-grid>-->
 
+        <!--    <ion-grid class="border_table">-->
+        <!--        <ion-row>-->
+        <!--            <ion-col class="home_table">Name</ion-col>-->
 
-</ion-content>
+        <!--            <ion-col class="home_table">Amount</ion-col>-->
+
+        <!--            <ion-col class="home_table">States</ion-col>-->
+
+        <!--            <ion-col class="home_table">Image</ion-col>-->
+        <!--        </ion-row>-->
+        <!--    </ion-grid>-->
+    </ion-content>
+</ion-app>

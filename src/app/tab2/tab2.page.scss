@@ -15,7 +15,18 @@ justify-content: center;
 width:120px;
 }
 
+.social_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.receive_text{
+    color: #7d7d7d;
+}
+.payment_text{
+    color: #E31459;
+}
 
 
 

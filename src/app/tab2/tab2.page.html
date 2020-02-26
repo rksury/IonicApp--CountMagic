@@ -4,18 +4,20 @@
         <form>
             <ion-row>
                 <ion-col></ion-col>
-                <ion-col >
-                    <div class="form-group">
-                        <ion-button [routerLink]="['/tabs/payment']" color="danger" shape="round">Payment</ion-button>
+                <ion-col>
+                    <div >
+                        <img width="60px;" src="/assets/icon/debit-card.svg" [routerLink]="['/tabs/payment']">
+                        <p class="payment_text">Payment</p>
                     </div>
                 </ion-col>
-
-                <ion-col >
+                <ion-col></ion-col>
+                <ion-col>
                     <div>
-                        <ion-button [routerLink]="['/tabs/receive']" color="light" shape="round">Receive</ion-button>
+                        <img width="60px;" src="/assets/icon/money.svg" [routerLink]="['/tabs/receive']">
+                        <p class="receive_text">Receive</p>
                     </div>
                 </ion-col>
-                 <ion-col></ion-col>
+                <ion-col></ion-col>
             </ion-row>
         </form>
     </ion-grid>
@@ -23,7 +25,7 @@
 
     <ion-grid class="payment_btn">
         <ion-row>
- <ion-col></ion-col>
+            <ion-col></ion-col>
             <ion-col>
                 <div>
                     <ion-button class="payment_mode_btn" [routerLink]="['/tabs/pcash']" color="success" shape="round"
@@ -42,14 +44,14 @@
                 </div>
             </ion-col>
 
-             <ion-col></ion-col>
+            <ion-col></ion-col>
         </ion-row>
-<!--    </ion-grid>-->
+        <!--    </ion-grid>-->
 
-<!--    <ion-grid class="payment_btn">-->
+        <!--    <ion-grid class="payment_btn">-->
         <ion-row>
-             <ion-col></ion-col>
-            <ion-col >
+            <ion-col></ion-col>
+            <ion-col>
                 <div>
                     <ion-button class="payment_mode_btn" [routerLink]="['/tabs/pcheque']" color="success" shape="round"
                                 fill="outline">Cheque
@@ -64,7 +66,7 @@
                     </ion-button>
                 </div>
             </ion-col>
-             <ion-col></ion-col>
+            <ion-col></ion-col>
         </ion-row>
     </ion-grid>
 
