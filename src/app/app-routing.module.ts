@@ -20,6 +20,10 @@ const routes: Routes = [
         path: 'processing',
         loadChildren: () => import('./processing/processing.module').then(m => m.ProcessingPageModule)
     },
+  {
+    path: 'example',
+    loadChildren: () => import('./example/example.module').then( m => m.ExamplePageModule)
+  },
 
 
 

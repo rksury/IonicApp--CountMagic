@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup,} from '@angular/forms';
 import {Router} from '@angular/router';
-import { BusinessformService } from "../All.Services/businessform.service";
+import { BusinessformService } from '../All.Services/businessform/businessform.service';
 
 @Component({
     selector: 'app-businessform',
@@ -50,7 +50,7 @@ export class BusinessformPage implements OnInit {
       this.businessformService.savedata(dataTosend).subscribe(data => {
 
         if (data === true) {
-          console.log("123456")
+          console.log('123456');
         }
         // console.log(data);
 

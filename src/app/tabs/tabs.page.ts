@@ -9,16 +9,16 @@ import { Router } from '@angular/router';
 export class TabsPage {
   constructor(private router: Router) {}
 
-  paymentlink(){
-    this.router.navigate(['/tabs/payment'])
-  };
+  paymentlink() {
+    this.router.navigate(['/tabs/payment']);
+  }
 
-  receivelink(){
-    this.router.navigate(['/tabs/receive'])
-  };
-  logout(){
-    this.router.navigate(['/login'])
-  };
+  receivelink() {
+    this.router.navigate(['/tabs/receive']);
+  }
+  logout() {
+    this.router.navigate(['/login']);
+  }
 
 
 
