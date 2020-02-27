@@ -9,12 +9,15 @@ import { HometablePageRoutingModule } from './hometable-routing.module';
 import { HometablePage } from './hometable.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HometablePageRoutingModule
-  ],
-  declarations: [HometablePage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HometablePageRoutingModule
+    ],
+    exports: [
+        HometablePage
+    ],
+    declarations: [HometablePage]
 })
 export class HometablePageModule {}
