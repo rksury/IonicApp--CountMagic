@@ -15,6 +15,7 @@ import { NonempformPage } from './nonempform.page';
     IonicModule,
     NonempformPageRoutingModule
   ],
+    // exports:[NonempformPage],
   declarations: [NonempformPage]
 })
 export class NonempformPageModule {}

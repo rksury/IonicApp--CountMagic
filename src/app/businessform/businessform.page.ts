@@ -54,7 +54,6 @@ export class BusinessformPage implements OnInit {
         }
         // console.log(data);
 
-        // alert('Successful Save');
         addError => this.errors = addError;
       });
       this.router.navigate(['./tabs/home']);

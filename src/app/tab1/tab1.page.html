@@ -1,54 +1,42 @@
-<ion-app>
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>HomePage</ion-title>
-            </ion-toolbar>
-        </ion-header>
-
 
     <ion-content>
-        <div>
-            <ion-grid class="full_btn">
-                <ion-row>
-                    <ion-col></ion-col>
-                    <ion-col>
-                        <div>
-                            <img width="40px;" src="/assets/icon/debit-card.svg" (click)="paymentlink()"
-                                 routerDirection="forward">
-                            <p class="icon_text">Payment</p>
-                        </div>
-                    </ion-col>
-                    <ion-col></ion-col>
-                    <ion-col>
-                        <div>
-                            <img width="40px;" src="/assets/icon/money.svg" (click)="receivelink()"
-                                 routerDirection="forward">
-                            <p class="icon_text">Receive</p>
-                        </div>
-                    </ion-col>
-                    <ion-col></ion-col>
-                </ion-row>
-            </ion-grid>
-        </div>
-        <div>
-            <ion-grid class="filter_bar">
-                <ion-row>
-                    <ion-col>
-                        <ion-button class="filter_btn" expand="block" color="warning">Pending</ion-button>
-                    </ion-col>
-                    <ion-col>
-                        <ion-button class="filter_btn" expand="block" color="danger">Payed</ion-button>
-                    </ion-col>
-                    <ion-col>
-                        <ion-button class="filter_btn" expand="block" color="success">Received</ion-button>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
-        </div>
+
+        <ion-grid class="full_btn">
+            <ion-row>
+                <ion-col></ion-col>
+                <ion-col>
+                    <div>
+                        <img width="50px;" src="/assets/icon/debit-card.svg" [routerLink]="['/tabs/payment']">
+                        <p class="icon_text">Payment</p>
+                    </div>
+                </ion-col>
+                <ion-col></ion-col>
+                <ion-col>
+                    <div>
+                        <img width="50px;" src="/assets/icon/money.svg" [routerLink]="['/tabs/receive']">
+                        <p class="icon_text">Receive</p>
+                    </div>
+                </ion-col>
+                <ion-col></ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-grid class="filter_bar">
+            <ion-row>
+                <ion-col>
+                    <ion-button class="filter_btn" expand="block" color="warning">Pending</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button class="filter_btn" expand="block" color="danger">Payed</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button class="filter_btn" expand="block" color="success">Received</ion-button>
+                </ion-col>
+            </ion-row>
+
+        </ion-grid>
 
 
-            <app-hometable></app-hometable>
 
 
     </ion-content>
-</ion-app>
