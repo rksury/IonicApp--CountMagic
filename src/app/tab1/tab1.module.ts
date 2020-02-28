@@ -12,7 +12,6 @@ import {HometablePage} from '../hometable/hometable.page';
         IonicModule,
         CommonModule,
         FormsModule,
-        // HometablePageModule,
         RouterModule.forChild([{path: '', component: Tab1Page}])
     ],
 

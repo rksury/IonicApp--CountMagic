@@ -1,28 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Home</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
 
-    <ion-content>
+        <ion-grid class="icon_btn">
 
-        <ion-grid class="full_btn">
-            <ion-row>
+            <ion-row class="icon_row">
                 <ion-col></ion-col>
                 <ion-col>
-                    <div>
-                        <img width="50px;" src="/assets/icon/debit-card.svg" [routerLink]="['/tabs/payment']">
-                        <p class="icon_text">Payment</p>
-                    </div>
+
+                    <img width="40px;" src="/assets/icon/debit-card.svg" [routerLink]="['/tabs/payment']">
+                    <p class="icon_text">Payment</p>
                 </ion-col>
+
                 <ion-col></ion-col>
                 <ion-col>
-                    <div>
-                        <img width="50px;" src="/assets/icon/money.svg" [routerLink]="['/tabs/receive']">
-                        <p class="icon_text">Receive</p>
-                    </div>
+
+                    <img width="40px;" src="/assets/icon/money.svg" [routerLink]="['/tabs/receive']">
+                    <p class="icon_text">Receive</p>
                 </ion-col>
+
                 <ion-col></ion-col>
             </ion-row>
+
         </ion-grid>
 
-        <ion-grid class="filter_bar">
-            <ion-row>
+        <ion-grid class="filter_grid">
+            <ion-row class="filter_row">
                 <ion-col>
                     <ion-button class="filter_btn" expand="block" color="warning">Pending</ion-button>
                 </ion-col>
@@ -37,6 +43,7 @@
         </ion-grid>
 
 
+    <app-hometable></app-hometable>
 
 
-    </ion-content>
+</ion-content>

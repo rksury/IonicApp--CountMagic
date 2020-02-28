@@ -1,56 +1,64 @@
 <ion-app>
-
-
     <ion-content>
         <div id="bg_color">
 
             <ion-slides>
                 <ion-slide>
                     <div class="img_overlay">
-                        <h1 class="heading1">welcome to Count Magic</h1>
+                        <h1 class="heading1">Welcome to the Count Magic</h1>
                     </div>
                 </ion-slide>
 
 
                 <ion-slide>
                     <div class="img_overlay">
-                        <p class="heading2">some message for "why we will use count magic"</p>
+                        <p class="heading2">some message for <br>"why we should use count magic"</p>
                     </div>
                 </ion-slide>
 
 
                 <ion-slide>
+
                     <div class="img_overlay">
+
                         <div>
-                            <ion-row>
-                                <ion-col size="12">
-                                    <h1 class="heading3">What is the Purpose</h1>
-                                </ion-col>
-                            </ion-row>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col>
+                                        <h1 class="heading3">What is the Purpose</h1>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
 
-                            <ion-row class="processing_link">
-                                <ion-col size="12">
-                                    <div class="part_line " (click)="nonemplink()" routerDirection="forward">
-                                        <i class="fa fa-caret-right"></i> Non Employment
-                                    </div>
-                                </ion-col>
-                            </ion-row>
+                            <ion-grid><ion-row><ion-col></ion-col></ion-row></ion-grid>
+                            <ion-grid><ion-row><ion-col></ion-col></ion-row></ion-grid>
+                            <ion-grid><ion-row><ion-col></ion-col></ion-row></ion-grid>
 
-                            <ion-row class="processing_link">
-                                <ion-col size="12">
-                                    <div class="part_line " (click)="emplink()" routerDirection="forward">
-                                        <i class="fas fa-user-tie "></i> Employee
-                                    </div>
-                                </ion-col>
-                            </ion-row>
+                            <ion-grid class="processing_link">
+                                <ion-row>
+                                    <ion-col>
+                                        <div class="part_line " (click)="nonemplink()" routerDirection="forward">
+                                            <i class="fa fa-caret-right"></i> Non Employment
+                                        </div>
+                                    </ion-col>
+                                </ion-row>
 
-                            <ion-row class="processing_link">
-                                <ion-col>
-                                    <div class="part_line " (click)="businessmenlink()" routerDirection="forward">
-                                        <i class="fas fa-briefcase"></i> Businessmen
-                                    </div>
-                                </ion-col>
-                            </ion-row>
+                                <ion-row>
+                                    <ion-col>
+                                        <div class="part_line " (click)="emplink()" routerDirection="forward">
+                                            <i class="fas fa-user-tie "></i> Employee
+                                        </div>
+                                    </ion-col>
+                                </ion-row>
+
+                                <ion-row>
+                                    <ion-col>
+                                        <div class="part_line " (click)="businessmenlink()" routerDirection="forward">
+                                            <i class="fas fa-briefcase"></i> Businessmen
+                                        </div>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
 
                         </div>
                     </div>

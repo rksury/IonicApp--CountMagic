@@ -1,36 +1,36 @@
-.full_btn {
+.icon_btn {
   justify-content: center;
   align-items: center;
   margin-top: 3%;
-
-
-}
-
-.fix_icon {
-  overflow: hidden;
-  width:100%;
   background-color: white;
-  border: 1px solid red;
-  top: 0;
-
-}
-
-.filter_bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.filter_btn {
-  width: 90px;
-  color: red;
-  padding: 0px;
+  padding: 0;
+  border-spacing: 0;
 }
 
 .icon_text {
   color: #7d7d7d;
 }
+
+
+.filter_grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0;
+  border-spacing: 0;
+  overflow: hidden;
+
+}
+.filter_row{
+   background-color: white;
+}
+
+.filter_btn {
+  width: 90px;
+  padding: 0px;
+}
+
 
 
 
