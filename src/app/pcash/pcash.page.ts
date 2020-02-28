@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-
+import {FormGroup, FormControl} from '@angular/forms';
 
 @Component({
     selector: 'app-pcash',
@@ -8,10 +8,21 @@ import {Component, OnInit} from '@angular/core';
 })
 export class PcashPage implements OnInit {
 
-    constructor() { }
+    submitform = new FormGroup({
+        fullname: new FormControl(''),
+        amount: new FormControl(''),
+        date: new FormControl(''),
+        contact: new FormControl(''),
+        remark: new FormControl(''),
+    });
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
+
+    ngOnInit() {
+
+        console.warn(this.submitform.value);
+    }
 
 }
 
