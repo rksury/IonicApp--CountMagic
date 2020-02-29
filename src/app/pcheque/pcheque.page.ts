@@ -21,7 +21,9 @@ export class PchequePage implements OnInit {
     constructor() {
     }
 
-    ngOnInit() {
+   ngOnInit() {}
+
+    onSubmit() {
         console.warn(this.submitform.value);
     }
 

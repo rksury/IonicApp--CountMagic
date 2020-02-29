@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -9,12 +9,13 @@ import { NonempformPageRoutingModule } from './nonempform-routing.module';
 import { NonempformPage } from './nonempform.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    NonempformPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        NonempformPageRoutingModule,
+        ReactiveFormsModule
+    ],
     // exports:[NonempformPage],
   declarations: [NonempformPage]
 })

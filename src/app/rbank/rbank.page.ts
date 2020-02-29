@@ -19,8 +19,9 @@ export class RbankPage implements OnInit {
         remark: new FormControl(''),
     });
 
-    ngOnInit() {
+   ngOnInit() {}
+
+    onSubmit() {
         console.warn(this.submitform.value);
     }
-
 }

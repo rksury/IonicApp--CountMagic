@@ -16,11 +16,10 @@ export class PcashPage implements OnInit {
         remark: new FormControl(''),
     });
 
-    constructor() {
-    }
+    constructor() {}
+ngOnInit() {}
 
-    ngOnInit() {
-
+    onSubmit() {
         console.warn(this.submitform.value);
     }
 

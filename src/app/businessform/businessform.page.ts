@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup,} from '@angular/forms';
-import {Router} from '@angular/router';
-import { BusinessformService } from '../All.Services/businessform/businessform.service';
+import {FormControl, FormGroup,} from '@angular/forms';
 
 @Component({
     selector: 'app-businessform',
@@ -10,54 +8,34 @@ import { BusinessformService } from '../All.Services/businessform/businessform.s
 })
 export class BusinessformPage implements OnInit {
 
-  BusinessFormgroup: FormGroup;
-  submitted = false;
-  username: 'string';
-  fullname: 'string';
-  email: 'string';
-  dob: 'string';
-  number: 'integer';
-  Password: 'string';
-  address: 'string';
+    submitform = new FormGroup({
+        username: new FormControl(''),
+        fullname: new FormControl(''),
+        email: new FormControl(''),
+        dob: new FormControl(''),
+        contact: new FormControl(''),
+        password: new FormControl(''),
+        address: new FormControl(''),
+        homezipcode: new FormControl(''),
+        country: new FormControl(''),
+        state: new FormControl(''),
+        city: new FormControl(''),
 
+        companyname: new FormControl(''),
+        companyzipcode: new FormControl(''),
 
-  companyname: 'string';
-  zipcode: 'string';
+        firmname: new FormControl(''),
+        gst: new FormControl(''),
+        pan: new FormControl(''),
+    });
 
-  firmname: 'string';
-  gst: 'string';
-  pan: 'string';
-
-  errors = [];
-
-
-  constructor(private formBuilder: FormBuilder, private router: Router, private businessformService: BusinessformService) {
-  }
-
-
-  ngOnInit() {}
-
-  OnSubmit(dataTosend) {
-
-
-    this.submitted = true;
-
-    if (this.BusinessFormgroup.invalid) {
-      return this.BusinessFormgroup;
-    } else {
-
-
-      this.businessformService.savedata(dataTosend).subscribe(data => {
-
-        if (data === true) {
-          console.log('123456');
-        }
-        // console.log(data);
-
-        addError => this.errors = addError;
-      });
-      this.router.navigate(['./tabs/home']);
+    constructor() {
     }
 
-  }
+    ngOnInit() {
+    }
+
+    onSubmit() {
+        console.warn(this.submitform.value);
+    }
 }
