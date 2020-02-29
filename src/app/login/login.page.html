@@ -6,7 +6,7 @@
         </div>
 
         <div>
-            <form [formGroup]="LoginForm" (ngSubmit)="LoginSubmit()" novalidate>
+            <form [formGroup]="submitform" (ngSubmit)="onSubmit()" novalidate>
                 <ion-grid class="main_grid">
                     <ion-row>
                         <ion-col>
@@ -33,7 +33,7 @@
                                 </div>
 
 
-                                <div class="form-group input-group">
+                                <div class="form-group input-group ">
                                     <ion-item>
                                         <ion-icon slot="start" name="key" color="primary"></ion-icon>
                                         <ion-input type="password" formControlName="password" placeholder="Password"
@@ -59,8 +59,11 @@
                 </ion-grid>
 
                 <ion-grid class="danger_btn">
-                    <ion-button [routerLink]="['/tabs/home']" expand="block" shape="round" color="danger">Login
-                    </ion-button>
+                    <div class="form-field">
+                        <ion-button [routerLink]="['/tabs/home']" expand="block" shape="round" color="danger"
+                                    [disabled]="!submitform.valid">Login
+                        </ion-button>
+                    </div>
                 </ion-grid>
             </form>
         </div>
