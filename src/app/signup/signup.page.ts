@@ -10,6 +10,13 @@ import {Router} from '@angular/router';
 })
 export class SignupPage implements OnInit {
 
+        // SignupForm = new FormGroup({
+        //     username: new FormControl(''),
+        //     email: new FormControl(''),
+        //     number: new FormControl(''),
+        //     password: new FormControl(''),
+        // });
+
     get username() {
         return this.SignupForm.get('username');
     }
@@ -18,7 +25,7 @@ export class SignupPage implements OnInit {
         return this.SignupForm.get('email');
     }
 
-    get mobile() {
+    get number() {
         return this.SignupForm.get('mobile');
     }
 
@@ -39,9 +46,9 @@ export class SignupPage implements OnInit {
             {type: 'required', message: 'E-mail required'},
             {type: 'pattern', message: 'enter a valid email address'}
         ],
-        mobile: [
+        number: [
             {type: 'required', message: 'mobile number required'},
-            // {   type: 'minLength', message: 'Incorrect mobile number '}
+             {   type: 'minLength', message: 'Incorrect mobile number '}
         ],
         password: [
             {type: 'required', message: 'password required'},
@@ -51,7 +58,7 @@ export class SignupPage implements OnInit {
     SignupForm = this.formBuilder.group({
         username: ['', Validators.required, Validators.minLength(3)],
         email: ['', [Validators.required, Validators.email]],
-        mobile: ['', [Validators.required, Validators.minLength(10)]],
+        number: ['', [Validators.required, Validators.minLength(10)]],
         password: ['', [Validators.required, Validators.minLength(6)]]
 
     });
@@ -59,15 +66,8 @@ export class SignupPage implements OnInit {
     ngOnInit() {
     }
 
+    onSubmit() {
+        console.warn(this.SignupForm.value);
+    }
 
-// onSubmit(){
-//
-// this.isSubmitted = true;
-//   if (!this.SignupForm.valid) {
-//
-//     return false;
-//   } else {
-//     console.log(this.SignupForm.value)
-//   }
-// }
 }

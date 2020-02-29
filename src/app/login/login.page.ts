@@ -10,13 +10,7 @@ import {LoginService} from '../All.Services/login/login.service';
 })
 export class LoginPage implements OnInit {
 
-    // submitform: FormGroup;
-    loading = false;
-    submitted = false;
-    // email: string;
-    // password: string;
-
-    submitform = new FormGroup({
+    LoginForm = new FormGroup({
         email: new FormControl(''),
         password: new FormControl(''),
     });
@@ -30,7 +24,7 @@ export class LoginPage implements OnInit {
     }
 
     ngOnInit() {
-        this.submitform = this.formBuilder.group({
+        this.LoginForm = this.formBuilder.group({
             email: new FormControl('', Validators.compose([
                 Validators.required, Validators.email, Validators.pattern
                 ('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
@@ -40,7 +34,7 @@ export class LoginPage implements OnInit {
     }
 
     // get function() {
-    //     return this.submitform.controls;
+    //     return this.LoginForm.controls;
     // }
 
     // LoginSubmit() {
@@ -48,15 +42,14 @@ export class LoginPage implements OnInit {
     //
     //     // stop here if form is invalid
     //     if (this.LoginForm.invalid) {
-    //         // console.log('123456789')
+    //         // console.log('LoginForm')
     //         return this.LoginForm;
     //     } else {
     //         this.loginService.Login(this.email, this.password);
     //     }
     // }
-
     onSubmit() {
-        console.warn(this.submitform.value);
+        console.warn(this.LoginForm.value);
     }
 }
 

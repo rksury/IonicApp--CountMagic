@@ -11,14 +11,14 @@
                 <ion-col></ion-col>
                 <ion-col>
 
-                    <img width="40px;" src="/assets/icon/debit-card.svg" [routerLink]="['/tabs/payment']">
+                    <img width="40px;" src="/assets/icon/debit-card.svg" (click)="paymentlink()" routerDirection="forward">
                     <p class="icon_text">Payment</p>
                 </ion-col>
 
                 <ion-col></ion-col>
                 <ion-col>
 
-                    <img width="40px;" src="/assets/icon/money.svg" [routerLink]="['/tabs/receive']">
+                    <img width="40px;" src="/assets/icon/money.svg" (click)="receivelink()" routerDirection="forward">
                     <p class="icon_text">Receive</p>
                 </ion-col>
 

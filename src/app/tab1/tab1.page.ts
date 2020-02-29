@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  paymentlink() {
+    this.router.navigate(['/tabs/payment']);
+  }
+
+  receivelink() {
+    this.router.navigate(['/tabs/receive']);
+  }
 }

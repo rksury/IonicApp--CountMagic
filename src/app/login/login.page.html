@@ -6,7 +6,7 @@
         </div>
 
         <div>
-            <form [formGroup]="submitform" (ngSubmit)="onSubmit()" novalidate>
+            <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()" novalidate>
                 <ion-grid class="main_grid">
                     <ion-row>
                         <ion-col>
@@ -61,7 +61,7 @@
                 <ion-grid class="danger_btn">
                     <div class="form-field">
                         <ion-button [routerLink]="['/tabs/home']" expand="block" shape="round" color="danger"
-                                    [disabled]="!submitform.valid">Login
+                                    [disabled]="!LoginForm.valid">Login
                         </ion-button>
                     </div>
                 </ion-grid>
