@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
+import {TransactionService} from "../All.Services/TransactionServices/transaction.service";
 
 @Component({
     selector: 'app-rpaytm',
@@ -10,19 +11,32 @@ export class RpaytmPage implements OnInit {
 
 
     submitform = new FormGroup({
-        fullname: new FormControl(''),
+        display_name: new FormControl(''),
         amount: new FormControl(''),
         date: new FormControl(''),
-        contact: new FormControl(''),
+        phone_number: new FormControl(''),
         remark: new FormControl(''),
     });
 
-    constructor() {
+    constructor(private transactionservice: TransactionService) {
     }
 
-    ngOnInit() {}
+    ngOnInit() {
+    }
 
     onSubmit() {
         console.warn(this.submitform.value);
+        console.warn(this.submitform.value)
+        const pcash_data = {
+            status: 'R',
+            medium: 'U',
+            receiver: window.localStorage.getItem('user_id')
+        };
+        const data = this.submitform.value;
+        const tempdata = {sender: 1};
+        // const merged1 = Object.assign()
+        var merged = Object.assign(data, pcash_data, tempdata);
+        this.transactionservice.createTransactions(merged).subscribe();
+
     }
 }
