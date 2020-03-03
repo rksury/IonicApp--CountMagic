@@ -13,45 +13,52 @@
                             <ion-item>
                                 <div class="form-field">
 
-                                    <ion-input type="text" formControlName="fullname" placeholder="Holder Name"
-                                               required></ion-input></div>
+                                    <ion-input type="text" formControlName="display_name" placeholder="Holder Name"
+                                               required></ion-input>
+                                </div>
                             </ion-item>
+
+<!--                            <ion-item>-->
+<!--                                <div class="form-field">-->
+<!---->
+<!--                                    <ion-input type="text" formControlName="bankname" placeholder="Bank Name"-->
+<!--                                               required></ion-input>-->
+<!--                                </div>-->
+<!--                            </ion-item>-->
+
+<!--                            <ion-item>-->
+<!--                                <div class="form-field">-->
+<!--                                    <ion-input type="text" formControlName="chequenumber" placeholder="Cheque Number"-->
+<!--                                               required></ion-input>-->
+<!--                                </div>-->
+<!--                            </ion-item>-->
 
                             <ion-item>
                                 <div class="form-field">
-
-                                    <ion-input type="text" formControlName="bankname" placeholder="Bank Name"
-                                               required></ion-input></div>
-                            </ion-item>
-
-                            <ion-item>
-                                <div class="form-field">
-                                    <ion-input type="text" formControlName="chequenumber" placeholder="Cheque Number"
-                                               required></ion-input></div>
-                            </ion-item>
-
-                            <ion-item>
-                                <div class="form-field">
-                                    <ion-input type="number" formControlName="contact" placeholder="Amount"
-                                               required></ion-input></div>
+                                    <ion-input type="number" formControlName="phone_number" placeholder="Contact"
+                                               required></ion-input>
+                                </div>
                             </ion-item>
 
                             <ion-item class="select_option">
                                 <div class="form-field">
                                     <ion-datetime type="date" displayFormat="DD/MM/YYYY" formControlName="date"
-                                                  placeholder="DD/MM/YYYY"></ion-datetime></div>
+                                                  placeholder="DD/MM/YYYY"></ion-datetime>
+                                </div>
                             </ion-item>
 
                             <ion-item>
                                 <div class="form-field">
                                     <ion-input type="number" formControlName="amount" placeholder="Amount"
-                                               required></ion-input></div>
+                                               required></ion-input>
+                                </div>
                             </ion-item>
 
                             <ion-item>
                                 <div class="form-field">
                                     <ion-textarea placeholder="*Remark" formControlName="remark"
-                                                  required></ion-textarea></div>
+                                                  required></ion-textarea>
+                                </div>
                             </ion-item>
 
                         </ion-list>
@@ -63,7 +70,8 @@
                         <div class="form-field">
                             <ion-button color="success" fill="outline" shape="round" type="submit"
                                         [disabled]="!submitform.valid">Submit
-                            </ion-button></div>
+                            </ion-button>
+                        </div>
                     </ion-col>
 
                 </ion-row>

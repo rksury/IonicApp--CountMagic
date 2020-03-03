@@ -9,7 +9,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 export class RcashPage implements OnInit {
 
   submitform = new FormGroup({
-        fullname: new FormControl(''),
+        display_name: new FormControl(''),
         bankname: new FormControl(''),
         amount: new FormControl(''),
         date: new FormControl(''),

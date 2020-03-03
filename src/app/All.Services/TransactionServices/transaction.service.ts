@@ -18,4 +18,12 @@ export class TransactionService {
         const url = this.baseurl + 'api/transaction'
         return this.httpClient.get<any>(url, {headers: authheaders});
     }
+
+    createTransactions(data) {
+        let authheaders = new HttpHeaders();
+        const token = window.localStorage.getItem('token')
+        authheaders = authheaders.set('Authorization', 'Bearer ' + token);
+        const url = this.baseurl + 'api/transaction'
+        return this.httpClient.post<any>(url, data, {headers: authheaders});
+    }
 }
