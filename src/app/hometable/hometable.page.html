@@ -1,170 +1,27 @@
 <ion-content>
 
     <ion-grid class="main_table">
-        <ion-row class="border_table">
-            <ion-col class="home_table">Kaushal<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
+        <ion-row class="border_table" *ngFor="let entry of data">
+            <ion-col class="home_table">{{entry.display_name}}<P><sub
+                    style="color:#E31459">{{entry.display_datetime}}</sub></P></ion-col>
 
-            <ion-col class="home_table">₹500</ion-col>
+            <ion-col class="home_table">₹{{entry.amount}}</ion-col>
 
-            <ion-col class="home_table">
+            <ion-col *ngIf="entry.status === 'R'" class="home_table">
                 <img width="20px;" src="/assets/green.png">
                 <p>Received</p>
             </ion-col>
-        </ion-row>
 
-        <ion-row class="border_table">
-            <ion-col class="home_table">Example<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹1000</ion-col>
-
-            <ion-col class="home_table">
+            <ion-col *ngIf="entry.status === 'P'" class="home_table">
                 <img width="20px;" src="/assets/pending.svg">
                 <p>Pending</p>
             </ion-col>
-        </ion-row>
 
-        <ion-row class="border_table">
-            <ion-col class="home_table">Advance<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹200</ion-col>
-
-            <ion-col class="home_table">
+            <ion-col *ngIf="entry.status === 'S'" class="home_table">
                 <img width="20px;" src="/assets/red.png">
                 <p>Payed</p>
             </ion-col>
         </ion-row>
-
-        <ion-row class="border_table">
-            <ion-col class="home_table">Kaushal<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹500</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/green.png">
-                <p>Received</p>
-            </ion-col>
-        </ion-row>
-
-        <ion-row class="border_table">
-            <ion-col class="home_table">Example<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹1000</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/pending.svg">
-                <p>Pending</p>
-            </ion-col>
-        </ion-row>
-
-        <ion-row class="border_table">
-            <ion-col class="home_table">Advance<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹200</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/red.png">
-                <p>Payed</p>
-            </ion-col>
-        </ion-row>
-        <ion-row class="border_table">
-            <ion-col class="home_table">Kaushal<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹500</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/green.png">
-                <p>Received</p>
-            </ion-col>
-        </ion-row>
-
-        <ion-row class="border_table">
-            <ion-col class="home_table">Example<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹1000</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/pending.svg">
-                <p>Pending</p>
-            </ion-col>
-        </ion-row>
-
-        <ion-row class="border_table">
-            <ion-col class="home_table">Advance<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹200</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/red.png">
-                <p>Payed</p>
-            </ion-col>
-        </ion-row>
-        <ion-row class="border_table">
-            <ion-col class="home_table">Kaushal<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹500</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/green.png">
-                <p>Received</p>
-            </ion-col>
-        </ion-row>
-
-        <ion-row class="border_table">
-            <ion-col class="home_table">Example<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹1000</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/pending.svg">
-                <p>Pending</p>
-            </ion-col>
-        </ion-row>
-
-        <ion-row class="border_table">
-            <ion-col class="home_table">Advance<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹200</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/red.png">
-                <p>Payed</p>
-            </ion-col>
-        </ion-row>
-
-        <ion-row class="border_table">
-            <ion-col class="home_table">Kaushal<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹500</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/green.png">
-                <p>Received</p>
-            </ion-col>
-        </ion-row>
-
-        <ion-row class="border_table">
-            <ion-col class="home_table">Example<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹1000</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/pending.svg">
-                <p>Pending</p>
-            </ion-col>
-        </ion-row>
-
-        <ion-row class="border_table">
-            <ion-col class="home_table">Advance<P><sub style="color:#E31459">22/02/2020</sub></P></ion-col>
-
-            <ion-col class="home_table">₹200</ion-col>
-
-            <ion-col class="home_table">
-                <img width="20px;" src="/assets/red.png">
-                <p>Payed</p>
-            </ion-col>
-        </ion-row>
-
-
     </ion-grid>
 
 </ion-content>

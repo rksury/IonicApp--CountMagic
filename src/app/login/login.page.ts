@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Validators, FormBuilder, FormGroup, FormControl} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
-import {LoginService} from '../All.Services/login/login.service';
+import {AuthService} from '../All.Services/login/auth.service';
 
 @Component({
     selector: 'app-login',
@@ -15,8 +15,9 @@ export class LoginPage implements OnInit {
         password: new FormControl(''),
     });
 
+
     constructor(private router: Router, private formBuilder: FormBuilder,
-                private loginService: LoginService, private route: ActivatedRoute) {
+                private loginService: AuthService, private route: ActivatedRoute) {
     }
 
     forgetpwdlink() {
@@ -25,11 +26,8 @@ export class LoginPage implements OnInit {
 
     ngOnInit() {
         this.LoginForm = this.formBuilder.group({
-            email: new FormControl('', Validators.compose([
-                Validators.required, Validators.email, Validators.pattern
-                ('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
-            ])),
-            password: ['', [Validators.required, Validators.minLength(6)]]
+            username: ['', [Validators.required]],
+            password: ['', [Validators.required, Validators.minLength(3)]]
         });
     }
 
@@ -49,7 +47,9 @@ export class LoginPage implements OnInit {
     //     }
     // }
     onSubmit() {
+        this.loginService.Login(this.LoginForm.value);
         console.warn(this.LoginForm.value);
+
     }
 }
 

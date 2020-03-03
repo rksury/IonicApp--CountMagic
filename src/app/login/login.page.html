@@ -14,16 +14,16 @@
                                 <div class="form-group input-group">
                                     <ion-item>
                                         <ion-icon slot="start" name="person" color="primary"></ion-icon>
-                                        <ion-input type="email" formControlName="email" placeholder=" E-mail"
-                                                   [ngClass]="{ 'is-invalid': submitted && function.email.errors }"
-                                                   [(ngModel)]="email" name="email" required></ion-input>
+                                        <ion-input type="text" formControlName="username" placeholder=" Username"
+                                                   [ngClass]="{ 'is-invalid': submitted && function.username.errors }"
+                                                   [(ngModel)]="username" name="username" required></ion-input>
 
-                                        <div *ngIf="submitted && function.email.errors" class="invalid-feedback">
-                                            <div *ngIf="function.email.errors.required"
+                                        <div *ngIf="submitted && function.username.errors" class="invalid-feedback">
+                                            <div *ngIf="function.username.errors.required"
                                                  style="color: red; font-family: Arial, Helvetica, sans-serif; font-size: smaller;">
                                                 Email Required*
                                             </div>
-                                            <div *ngIf="function.email.errors.email"
+                                            <div *ngIf="function.username.errors.username"
                                                  style="color: red; font-family: Arial, Helvetica, sans-serif; font-size: smaller;">
                                                 Email must be a valid email address
                                             </div>
@@ -60,7 +60,7 @@
 
                 <ion-grid class="danger_btn">
                     <div class="form-field">
-                        <ion-button [routerLink]="['/tabs/home']" expand="block" shape="round" color="danger"
+                        <ion-button type="submit" [routerLink]="['/tabs/home']" expand="block" shape="round" color="danger"
                                     [disabled]="!LoginForm.valid">Login
                         </ion-button>
                     </div>
