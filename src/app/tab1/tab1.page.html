@@ -5,45 +5,73 @@
 </ion-header>
 <ion-content>
 
-        <ion-grid class="icon_btn">
+    <ion-grid class="icon_btn">
 
-            <ion-row class="icon_row">
-                <ion-col></ion-col>
-                <ion-col>
+        <ion-row class="icon_row">
+            <ion-col></ion-col>
+            <ion-col>
 
-                    <img width="40px;" src="/assets/icon/debit-card.svg" (click)="paymentlink()" routerDirection="forward">
-                    <p class="icon_text">Payment</p>
-                </ion-col>
+                <img width="40px;" src="/assets/icon/debit-card.svg" (click)="paymentlink()" routerDirection="forward">
+                <p class="icon_text">Payment</p>
+            </ion-col>
 
-                <ion-col></ion-col>
-                <ion-col>
+            <ion-col></ion-col>
+            <ion-col>
 
-                    <img width="40px;" src="/assets/icon/money.svg" (click)="receivelink()" routerDirection="forward">
-                    <p class="icon_text">Receive</p>
-                </ion-col>
+                <img width="40px;" src="/assets/icon/money.svg" (click)="receivelink()" routerDirection="forward">
+                <p class="icon_text">Receive</p>
+            </ion-col>
 
-                <ion-col></ion-col>
-            </ion-row>
+            <ion-col></ion-col>
+        </ion-row>
 
-        </ion-grid>
+    </ion-grid>
 
-        <ion-grid class="filter_grid">
-<!--            <ion-row class="filter_row">-->
-<!--                <ion-col>-->
-<!--                    <ion-button (click)="" class="filter_btn" expand="block" color="warning">Pending</ion-button>-->
-<!--                </ion-col>-->
-<!--                <ion-col>-->
-<!--                    <ion-button class="filter_btn" expand="block" color="danger">Payed</ion-button>-->
-<!--                </ion-col>-->
-<!--                <ion-col>-->
-<!--                    <ion-button class="filter_btn" expand="block" color="success">Received</ion-button>-->
-<!--                </ion-col>-->
-<!--            </ion-row>-->
+    <ion-grid class="filter_grid">
+        <!--            <ion-row class="filter_row">-->
+        <!--                <ion-col>-->
+        <!--                    <ion-button (click)="" class="filter_btn" expand="block" color="warning">Pending</ion-button>-->
+        <!--                </ion-col>-->
+        <!--                <ion-col>-->
+        <!--                    <ion-button class="filter_btn" expand="block" color="danger">Payed</ion-button>-->
+        <!--                </ion-col>-->
+        <!--                <ion-col>-->
+        <!--                    <ion-button class="filter_btn" expand="block" color="success">Received</ion-button>-->
+        <!--                </ion-col>-->
+        <!--            </ion-row>-->
 
-        </ion-grid>
+    </ion-grid>
 
 
-    <app-hometable></app-hometable>
+    <!--    <app-hometable></app-hometable>-->
+    <!--    <ion-content>-->
+
+    <ion-grid class="main_table">
+        <ion-row class="border_table" *ngFor="let entry of data">
+
+            <ion-col class="home_table">{{entry.display_name}}<P><sub
+                    style="color:#E31459">{{entry.display_datetime}}</sub></P></ion-col>
+
+            <ion-col class="home_table">₹{{entry.amount}}</ion-col>
+
+            <ion-col *ngIf="entry.status === 'R'" class="home_table">
+                <img width="20px;" src="/assets/green.png">
+                <p>Received</p>
+            </ion-col>
+
+            <ion-col *ngIf="entry.status === 'P'" class="home_table">
+                <img width="20px;" src="/assets/pending.svg">
+                <p>Pending</p>
+            </ion-col>
+
+            <ion-col *ngIf="entry.status === 'S'" class="home_table">
+                <img width="20px;" src="/assets/red.png">
+                <p>Payed</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!--    </ion-content>-->
 
 
 </ion-content>

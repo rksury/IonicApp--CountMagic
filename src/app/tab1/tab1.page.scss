@@ -22,8 +22,9 @@
   overflow: hidden;
 
 }
-.filter_row{
-   background-color: white;
+
+.filter_row {
+  background-color: white;
 }
 
 .filter_btn {
@@ -32,6 +33,20 @@
 }
 
 
+.border_table {
+  border: 1px solid #b8b8b8;
+}
+
+.main_table {
+  //margin-top: 20%;
+}
+
+.home_table {
+  //border: 1px solid #4d4d4d;
+  text-align: center;
+  color: #4d4d4d;
+  font-weight: bold;
+}
 
 
 

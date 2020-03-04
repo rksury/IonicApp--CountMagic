@@ -13,7 +13,12 @@ export class LoginPage implements OnInit {
     LoginForm = new FormGroup({
         email: new FormControl(''),
         password: new FormControl(''),
-    });
+    })
+
+    ionViewWillEnter() {
+        this.loginService.checkOnstart();
+
+    }
 
 
     constructor(private router: Router, private formBuilder: FormBuilder,
@@ -48,7 +53,6 @@ export class LoginPage implements OnInit {
     // }
     onSubmit() {
         this.loginService.Login(this.LoginForm.value);
-        console.warn(this.LoginForm.value);
 
     }
 }

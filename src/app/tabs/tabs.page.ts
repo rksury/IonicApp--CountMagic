@@ -1,25 +1,33 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthService} from '../All.Services/login/auth.service';
 
 @Component({
-  selector: 'app-tabs',
-  templateUrl: 'tabs.page.html',
-  styleUrls: ['tabs.page.scss']
+    selector: 'app-tabs',
+    templateUrl: 'tabs.page.html',
+    styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
-  constructor(private router: Router) {}
+    constructor(private router: Router,
+                private authservice: AuthService) {
+    }
 
-  paymentlink() {
-    this.router.navigate(['/tabs/payment']);
-  }
+    ionViewWillEnter() {
+        this.authservice.verifyToken();
 
-  receivelink() {
-    this.router.navigate(['/tabs/receive']);
-  }
-  logout() {
-    this.router.navigate(['/login']);
-  }
+    }
 
+    paymentlink() {
+        this.router.navigate(['/tabs/payment']);
+    }
+
+    receivelink() {
+        this.router.navigate(['/tabs/receive']);
+    }
+
+    logout() {
+        this.authservice.logout();
+    }
 
 
 }

@@ -24,9 +24,33 @@ export class AuthService {
                 this.router.navigate(['/tabs/home']);
 
             }, error => {
-                window.alert(error.error);
+                this.router.navigate(['/login']);
+                window.alert('Unable to log in with provided credentials.');
             }
         );
+    }
+
+    checkOnstart() {
+        if (window.localStorage.getItem('token')) {
+            this.router.navigate(['/tabs/home']);
+
+        } else {
+            this.router.navigate(['/login']);
+
+        }
+
+        // const url = this.baseurl + 'api/user/verify-token';
+        // this.httpClient.post(url, {token: window.localStorage.getItem('token')}).subscribe(data => {
+        //         this.router.navigate(['/tabs/home']);
+        //
+        //     },
+        //     error => {
+        //         if (error.status === 400) {
+        //             this.router.navigate(['/login']);
+        //         }
+        //     }
+        // )
+        // ;
     }
 
     getUserWithPhone(phonenumber) {
@@ -49,5 +73,12 @@ export class AuthService {
             }
         )
         ;
+    }
+
+
+    logout() {
+        window.localStorage.clear()
+        this.router.navigate(['/login']);
+
     }
 }

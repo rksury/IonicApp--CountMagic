@@ -15,7 +15,7 @@ import {HometablePage} from '../hometable/hometable.page';
         RouterModule.forChild([{path: '', component: Tab1Page}])
     ],
 
-    declarations: [Tab1Page, HometablePage]
+    declarations: [Tab1Page]
 })
 export class Tab1PageModule {
 }
