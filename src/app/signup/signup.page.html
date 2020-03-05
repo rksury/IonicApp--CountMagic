@@ -11,70 +11,48 @@
                 <ion-grid class="main_grid">
                     <ion-row>
                         <ion-col>
-                                <ion-list>
-                                    <ion-item>
-                                        <ion-icon slot="start" name="person" color="primary"></ion-icon>
-                                        <div class="form-field">
-                                            <ion-input type="text" formControlName="username" placeholder="Username"
-                                                       required></ion-input>
+                            <ion-list>
+                                <ion-item>
+                                    <ion-icon slot="start" name="person" color="primary"></ion-icon>
+                                    <div class="form-field">
+                                        <ion-input type="text" formControlName="username" placeholder="Username"
+                                                   required></ion-input>
 
-                                            <div *ngFor="let error of errorMessage.username" style="color: red;">
-                                                <ng-container
-                                                        *ngIf="username.hasError(error.type) && (username.dirty || username.touched)">
-                                                    <small class="error-message">{{error.message}}</small>
-                                                </ng-container>
-                                            </div>
-                                        </div>
-                                    </ion-item>
+                                    </div>
+                                </ion-item>
 
 
-                                    <ion-item>
-                                        <ion-icon slot="start" name="mail" color="primary"></ion-icon>
-                                        <div class="form-field">
-                                            <ion-input type="email" formControlName="email" placeholder="E-mail"
-                                                       required></ion-input>
+                                <ion-item>
+                                    <ion-icon slot="start" name="mail" color="primary"></ion-icon>
+                                    <div class="form-field">
+                                        <ion-input type="email" formControlName="email" placeholder="E-mail"
+                                                   required></ion-input>
 
-                                            <div *ngFor="let error of errorMessage.email" style="color: red;">
-                                                <ng-container
-                                                        *ngIf="email.hasError(error.type) && (email.dirty || email.touched)">
-                                                    <small class="error-message">{{error.message}}</small>
-                                                </ng-container>
-                                            </div>
-                                        </div>
-                                    </ion-item>
+                                    </div>
+                                </ion-item>
 
 
-                                    <ion-item>
-                                        <ion-icon slot="start" name="call" color="primary"></ion-icon>
-                                        <div class="form-field">
-                                            <ion-input type="number" formControlName="number" placeholder="+91"
-                                                       required></ion-input>
-
-                                            <div *ngFor="let error of errorMessage.mobile" style="color: red;">
-                                                <ng-container
-                                                        *ngIf="mobile.hasError(error.type) && (mobile.dirty || mobile.touched)">
-                                                    <small class="error-message">{{error.message}}</small>
-                                                </ng-container>
-                                            </div>
-                                        </div>
-                                    </ion-item>
+                                <ion-item>
+                                    <ion-icon slot="start" name="call" color="primary"></ion-icon>
+                                    <div class="form-field">
+                                        <ion-input type="number" formControlName="phone_number" placeholder="+91"
+                                                   required></ion-input>
 
 
-                                    <ion-item>
-                                        <ion-icon slot="start" name="key" color="primary"></ion-icon>
-                                        <div class="form-field">
-                                            <ion-input type="password" formControlName="password" placeholder="Password"
-                                                       required></ion-input>
+                                    </div>
+                                </ion-item>
 
-                                            <div *ngFor="let error of errorMessage.password" style="color: red;">
-                                                <ng-container
-                                                        *ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
-                                                    <small class="error-message">{{error.message}}</small>
-                                                </ng-container>
-                                            </div>
-                                        </div>
-                                    </ion-item>
-                                </ion-list>
+
+                                <ion-item>
+                                    <ion-icon slot="start" name="key" color="primary"></ion-icon>
+                                    <div class="form-field">
+                                        <ion-input type="password" formControlName="password" placeholder="Password"
+                                                   required></ion-input>
+
+
+                                    </div>
+                                </ion-item>
+                            </ion-list>
 
                         </ion-col>
                     </ion-row>
@@ -85,7 +63,7 @@
                     <ion-row>
                         <ion-col>
                             <div class="form-field">
-                                <ion-button [routerLink]="['/processing']" type="submit" expand="block" shape="round"
+                                <ion-button type="submit" expand="block" shape="round"
                                             color="danger">Signup
                                 </ion-button>
                             </div>

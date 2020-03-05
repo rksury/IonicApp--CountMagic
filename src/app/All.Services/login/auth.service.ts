@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {environment} from '../../../environments/environment';
+import {AlertController} from '@ionic/angular';
 
 @Injectable({
     providedIn: 'root'
@@ -9,8 +10,47 @@ import {environment} from '../../../environments/environment';
 export class AuthService {
     baseurl = environment.base_url;
 
-    constructor(private httpClient: HttpClient, private router: Router) {
+    constructor(private httpClient: HttpClient, private router: Router,
+                private alertCtrl: AlertController) {
 
+    }
+
+    async presentAlert(headervalue, messagevalue) {
+        let alert = await this.alertCtrl.create({
+            header: headervalue,
+            // subHeader: '10% of battery remaining',
+            message: messagevalue,
+            buttons: ['Dismiss']
+        });
+        await alert.present();
+    }
+
+    // tslint:disable-next-line:no-shadowed-variable
+    createErrorAlert(error) {
+        console.log(error.error);
+        const err = error.error;
+        // tslint:disable-next-line:forin
+        for (let key in err) {
+            let value = err[key];
+            console.log(value[0]);
+            this.presentAlert('Error', value[0]);
+            // Use `key` and `value`
+        }
+
+    }
+
+    register(payloaddata) {
+        const baseurl = this.baseurl + 'api/user/create';
+        return this.httpClient.post(baseurl, payloaddata).subscribe(
+            data => {
+                window.alert('Successfully Registered Please Login Now.');
+            },
+            // tslint:disable-next-line:no-shadowed-variable
+            error => {
+                this.createErrorAlert(error);
+            }
+        )
+            ;
     }
 
     Login(payloaddata) {
@@ -25,7 +65,8 @@ export class AuthService {
 
             }, error => {
                 this.router.navigate(['/login']);
-                window.alert('Unable to log in with provided credentials.');
+                // window.alert('Unable to log in with provided credentials.');
+                this.createErrorAlert(error);
             }
         );
     }
